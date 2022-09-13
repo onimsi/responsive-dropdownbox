@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    background-image:url(/WhatsApp\ Image\ 2022-08-30\ at\ 13.11.50\ \(1\).jpeg);
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;    
+}
+
+ header{ 
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color:#6a6C6d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 1000;     
+}
+.home, .about, .contact, .services{
+    margin: 0 15px;
+    border: 0px solid black;
+    /* background-color: #ffff; */
+}
+
+ul li {
+    padding: 5px;
+}
+
+ul li a{
+    color: black;
+}
+ul li a:hover{
+    transition: 1s;
+    color:white;
+}
+header .logo{
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+}
+
+header .logo .spn{
+    font-size: 45px;
+    font-family: serif;
+    font-weight: bold;
+    color: #ffff;
+}
+.logo{
+    margin: 0 30px;
+}
+.about{
+    position: relative;
+}
+.dropdownAbout{
+    position: absolute;
+    right: -30px;
+    background: rgb(212, 208, 208);
+    padding: 12px 18px;
+    display: none;
+    margin-top: px;
+    opacity: 0.8;
+}
+.dropdownAbout, .dropdownContact, .dropdownServices  li{
+    padding: 12px;
+    /* z-index: 100; */
+}
+.contact{
+    position: relative;
+}
+.dropdownContact{
+    position: absolute;
+    right: 100px;
+    background: rgb(212, 208, 208);
+    padding: 12px 18px;
+    display: none;
+}
+
+.services{
+    position: relative;
+}
+.dropdownServices{
+    position: absolute;
+    right: -50px;
+    background: rgb(212, 208, 208);
+    padding: 12px 18px;
+    display: none;
+    opacity: 0.8;
+    margin-top: px;
+
+
+}
+.about:hover> .dropdownAbout{
+    display: block;
+}
+
+.services:hover> .dropdownServices{
+    display: block;
+}
+/* .navbar li:hover{
+    background-color: #ffff;
+} */
+
+header .navbar ul{
+
+    padding: 0 20px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+header .toggle-btn:hover  header .mobile-nav {
+    display: block;
+}
+
+
+
+header .navbar ul li{
+    display: inline-block;
+    list-style-type: none;
+  
+}
+.toggle-btn{
+    position: absolute;
+    width: 35px;
+    right: 80px;
+    top: 40px;
+}
+.toggle-btn, .bar{
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    float: left;
+    margin-bottom: 8px;
+}
+
+.ex{
+    color: #000;
+    width: 400px;
+    font-weight: bold;
+    display: none;
+}
+
+@media (max-width:616px){
+
+    .toggle-btn{
+        display: block;
+    }
+
+    .navbar{
+        width: 100%;
+        display: none;  
+        position: relative;
+    }
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar ul li{
+        width: 100%;
+        display: block !important;
+        align-items: center;
+    }
+    .navbar  li{
+        text-align: center;
+
+    }
+    .navbar.active{
+        display: flex;
+    }
+
+    .responsiveNav{
+        display: block;
+    }
+
+}
+
+@media(min-width:617px){
+
+    .toggle-btn{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
